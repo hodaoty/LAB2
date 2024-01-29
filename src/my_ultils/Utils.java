@@ -88,6 +88,9 @@ public class Utils {
         return i;
     }
     
+    public static void print(){
+        System.out.println("Hello moi nguoi");
+    }
     
     public static String getStringCanNull(String welcome) {
         String result = "";
