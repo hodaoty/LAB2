@@ -88,6 +88,9 @@ public class Utils {
         return i;
     }
     
+    
+    // Hello moi nguoi 
+    
     public static String getStringCanNull(String welcome) {
         String result = "";
         Scanner sc = new Scanner(System.in);
