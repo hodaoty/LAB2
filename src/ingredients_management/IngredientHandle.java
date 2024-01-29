@@ -80,6 +80,13 @@ public class IngredientHandle {
         }
         return -1;
     }
+    
+    private int findByName(String info) {
+        for(int i=0;i<ingreList.size();i++){
+            if(ingreList.get(i).getIngreName().toUpperCase().equals(info.toUpperCase())) return i;
+        }
+        return -1;
+    }
 
     private boolean checkNumber(String info) {
         int count = 0;
