@@ -12,7 +12,9 @@ public class MenuInformations implements Comparable<MenuInformations>{
     private int menuPrice;
     private int menuStatus;
 
+
     public MenuInformations(String menuCode, String menuName, String menuRecipe, int menuPrice,int menuStatus) {
+
         this.menuCode = menuCode;
         this.menuName = menuName;
         this.menuRecipe = menuRecipe;

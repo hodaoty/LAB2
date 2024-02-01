@@ -12,6 +12,7 @@ import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;
 import java.util.StringTokenizer;
@@ -24,10 +25,11 @@ public class MenuHandle {
     List<RecipeInformation> recipeList = new ArrayList();
 
     Scanner sc = new Scanner(System.in);
-
+    HashMap<String, String> recipeMap = new HashMap<>();
     public MenuHandle() {
         super();
     }
+
 
     public void addFromFileMenu(String fName) {
         try {
@@ -57,7 +59,11 @@ public class MenuHandle {
         }
     }
 
+
     public void saveToFileMenu(String fName) {
+
+    
+
         if (menuList.isEmpty()) {
             System.out.println("Empty list");
             return;
@@ -155,6 +161,7 @@ public class MenuHandle {
 
     }
 
+
     private int findByCode(String info) {
         for (int i = 0; i < menuList.size(); i++) {
             if (menuList.get(i).getMenuCode().toUpperCase().equals(info.toUpperCase())) {
@@ -163,6 +170,7 @@ public class MenuHandle {
         }
         return -1;
     }
+
 
     private int findRecipe(String info) {
         for (int i = 0; i < recipeList.size(); i++) {
@@ -263,5 +271,5 @@ public class MenuHandle {
 
         }
     }
-
 }
+
