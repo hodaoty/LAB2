@@ -5,18 +5,29 @@
  */
 package menu_management;
 
-public class MenuInformations {
+public class MenuInformations implements Comparable<MenuInformations>{
     private String menuCode;
     private String menuName;
     private String menuRecipe;
     private int menuPrice;
+    private int menuStatus;
 
-    public MenuInformations(String menuCode, String menuName, String menuRecipe, int menuPrice) {
+    public MenuInformations(String menuCode, String menuName, String menuRecipe, int menuPrice,int menuStatus) {
         this.menuCode = menuCode;
         this.menuName = menuName;
         this.menuRecipe = menuRecipe;
         this.menuPrice = menuPrice;
+        this.menuStatus = menuStatus;
     }
+
+    public int getMenuStatus() {
+        return menuStatus;
+    }
+
+    public void setMenuStatus(int menuStatus) {
+        this.menuStatus = menuStatus;
+    }
+    
 
     public String getMenuCode() {
         return menuCode;
@@ -53,6 +64,12 @@ public class MenuInformations {
     @Override
     public String toString(){
         return "Code :"+menuCode+" Name :"+menuName+" Recipe :"+menuRecipe+ "Price :"+menuPrice;
+    }
+
+
+    @Override
+    public int compareTo(MenuInformations t) {
+        return this.getMenuName().compareTo(t.getMenuName());
     }
     
 }
